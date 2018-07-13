@@ -56,12 +56,12 @@ $(document).ready(function(){
 <body>
 <p align="center" style="color: green;">${param.message}</p>
 <input type="hidden" value="${loggedInId}" id="loggedInId"/>
-<h2 style="text-align: center;"><img src="https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/1930247/1160/772/m1/fpnw/wm0/preview001-.jpg?1479808169&amp;amp;s=4f3f8b8b27b99d16f6196c23f801ef18" alt="BankLogo" width="150" height="101" style="float: left;" caption="false" />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Welcome to BankApp</h2>
+<h2 style="text-align: center;"><img src="http://mahagramin.in/images/ebank.jpg" alt="BankLogo" width="150" height="101" style="float: left;" caption="false" />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Welcome to BankClient</h2>
 <p style="text-align: right;">
 <strong><a href="#" id="viewProfile">View Profile</a>&nbsp;</strong> &nbsp; &nbsp;&nbsp;
 <strong><a href="#" id="editProfile">Edit Profile</a>&nbsp;</strong> &nbsp; &nbsp;&nbsp;
 <strong>
-<select name="bankName" id="bankName">
+<select name="bankName" id="bankName" style="width: 100px">
 <option value="0">Bank</option>
 <option value="SBI">SBI</option>
 <option value="AXIS">AXIS</option>

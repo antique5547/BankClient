@@ -25,7 +25,7 @@ $(document).ready(function(){
 </script>
 </head>
 <body onload="$('#login').click();">
-<p style="text-align: center;"><strong><img src="https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/1930247/1160/772/m1/fpnw/wm0/preview001-.jpg?1479808169&amp;s=4f3f8b8b27b99d16f6196c23f801ef18" alt="BankApp" width="100" height="100" /></strong></p>
+<p style="text-align: center;"><strong><img src="http://mahagramin.in/images/ebank.jpg" alt="BankApp" width="100" height="100" /></strong></p>
 <p style="text-align: center;">
 <strong>Welcome To BankClient</strong>
 </p>

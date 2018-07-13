@@ -8,8 +8,25 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
 
+$("#loginButton").on('click',function(){
+	var uname=$("#uname").val();
+	var pwd=$("#password").val();
+	if(uname === ""){
+		alert("Enter Username");
+		$("#uname").focus();
+		return false;
+	}
+	if(pwd === ""){
+		alert("Enter Password");
+		$("#password").focus();
+		return false;
+	}
+	return true;
+	
+})
+
 </script>
-<title>Insert title here</title>
+<title>bankLoginPage</title>
 </head>
 <body>
 <h4 style="text-align: center;">Welcome to ${bankName } Bank</h4>
@@ -20,11 +37,11 @@
 <tbody>
 <tr>
 <td style="width: 189px;">Username</td>
-<td style="width: 208px;"><input type="text" name="uname"> </td>
+<td style="width: 208px;"><input type="text" name="uname" id="uname"> </td>
 </tr>
 <tr>
 <td style="width: 189px;">Password</td>
-<td style="width: 208px;"><input type="password" name="password"> </td>
+<td style="width: 208px;"><input type="password" name="password" id="password"> </td>
 </tr>
 <tr>
 <td style="width: 208px;" colspan="2" align="center"><input type="submit" value="Login" id="loginButton"> </td>
