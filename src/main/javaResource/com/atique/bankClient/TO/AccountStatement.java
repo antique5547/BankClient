@@ -1,16 +1,6 @@
 package com.atique.bankClient.TO;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name="AccountStatement")
 public class AccountStatement {
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	int asId;
 	int userId;
 	String time;
