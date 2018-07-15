@@ -18,12 +18,12 @@
 <div id="bankLoginPageDiv"></div>
 <div id="userDetailsDiv">
 <c:if test="${viewUsers eq 'YES'}">
-<p align="center">Successfully Logged In</p>
+<p align="center"> Logged In</p>
 <p style="text-align: right;">
 <strong><a href="#" id="viewProfile1">Profile Details</a>&nbsp;</strong> &nbsp; &nbsp;&nbsp;
 <strong><a href="#" id="accounDetails">Account Details</a>&nbsp;</strong> &nbsp; &nbsp;&nbsp;
 <strong><a href="#" id="accountStmtDiv">Account Statements</a>&nbsp;</strong> &nbsp; &nbsp;&nbsp;
-
+<strong><a href="#" id="accountLogoutDiv">Logout</a>&nbsp;</strong> &nbsp; &nbsp;&nbsp;
 </p>
 
 <div id="viewProfileDetailDiv">

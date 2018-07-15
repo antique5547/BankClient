@@ -1,6 +1,7 @@
 package com.atique.bankClient.service;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -52,4 +53,12 @@ public void updateUser(HttpServletRequest req) {
 public int loginUser(HttpServletRequest req) {
 		return baDao.verifyUser(req.getParameter("uname"), req.getParameter("password"));
 	}
+
+public boolean checkUserAvailibility(String uname) {
+	List list = baDao.getUserByUserName(uname);
+	if(list.size()==0)
+		return true;
+	else
+		return false;
+}
 }

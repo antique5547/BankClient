@@ -40,6 +40,12 @@ public class BankClientController {
 		return "registerPage";
 	}
 	
+	@RequestMapping(value="checkUserValidation.bapp")
+	public @ResponseBody boolean checkUserValidation(HttpServletRequest req) {
+		String uname=req.getParameter("uname");
+		
+		return bClientService.checkUserAvailibility(uname);
+	}
 	
 	@RequestMapping(value="registerUser.bapp")
 	public String registerUser(HttpServletRequest req) {
@@ -120,12 +126,21 @@ public class BankClientController {
 	}
 	
 	@RequestMapping(value="bankLoginPage.bapp")
-	public String showBankLoginPage(HttpServletRequest req) throws UnsupportedEncodingException {
+	public String showBankLoginPage(HttpServletRequest req) {
 		System.out.println("showBankLoginPage()");
 		String bankName=req.getParameter("bankName");
 		String message=req.getParameter("message");
 		req.setAttribute("message",message);
 		req.setAttribute("bankName", bankName);
+		return "bankLoginPage";
+	}
+	
+	@RequestMapping(value="logoutFromAccount.bapp")
+	public String logoutFromAccount(HttpServletRequest req){
+		if(req.getSession().getAttribute("userIdForLoggedInBank") != null) {
+			req.getSession().removeAttribute("userIdForLoggedInBank");
+		}
+		req.setAttribute("message","Successfully LoggedOut");
 		return "bankLoginPage";
 	}
 	
@@ -152,6 +167,7 @@ public class BankClientController {
 			req.setAttribute("userDetails", um);
 			req.setAttribute("viewUsers", "YES");
 			req.getSession().setAttribute("userIdForLoggedInBank", userId);
+			req.getSession().setAttribute("bankName", bankName);
 		}
 		return "userBankHomePage";
 	}
@@ -206,5 +222,6 @@ public String getLoggedOut(HttpServletRequest req) {
 	
 	return "index";
 }
-	
+
+
 }

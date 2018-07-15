@@ -12,4 +12,5 @@ public Serializable addUser(HttpServletRequest req);
 public UserMaster getUserDetails(int loggedInId);
 public void updateUser(HttpServletRequest req);
 public int loginUser(HttpServletRequest req);
+public boolean checkUserAvailibility(String uname);
 }
